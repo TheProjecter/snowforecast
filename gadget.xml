@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="SnowForecast Weather" title_url="__UP_myname__" height="250"/>
+  <ModulePrefs title="__UP_myname__" 
+	       height="200" 
+	       author="Ignacio Rodriguez" 
+	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
   <UserPref name="myname" display_name="Title" required="true" />
   <UserPref name="mystation" display_name="Ski Resort" default_value="Grandvalira" datatype="enum" >
     <EnumValue value="Navacerrada" />
