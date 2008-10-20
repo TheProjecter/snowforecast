@@ -5,9 +5,14 @@
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
 
-  <UserPref name="myname" display_name="Title" required="true" default="Snowforecast Ski-Resort"/>
+  <UserPref name="myname" display_name="Title" required="true"/>
 
-
+  <UserPref name="mystation" display_name="Ski Resort" default_value="La-Pinilla" display_value="La Pinilla" datatype="enum" >
+    <EnumValue value="La-Pinilla" display_value="La Pinilla" />
+    <EnumValue value="PuertoDeNavacerrada" display_value="Puerto Navacerrada"/>
+    <EnumValue value="Valdezcaray" display_value="Valdezcaray"/>
+    <EnumValue value="Valdesqui" display_value="Valdesqui"/>
+  </UserPref> 
 
   <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
     <EnumValue value="bot" display_value="Bot" />
