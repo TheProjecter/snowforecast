@@ -5,10 +5,11 @@
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
 
-   <Content type="html">
-     <![CDATA[ 
+ <UserPref name="myname" display_name="Title" required="true"/>
+
+ <Content type="html">
+   <![CDATA[ 
        Hello, world!
      ]]>
-  </Content> 
-
+ </Content> 
 </Module>
