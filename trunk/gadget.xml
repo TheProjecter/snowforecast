@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="Preferences for __UP_myname__" height="250"/>
+  <ModulePrefs title="SnowForecast Weather" title_url="__UP_myname__" height="250"/>
   <UserPref name="myname" display_name="Title" required="true" />
+  <UserPref name="mystation" display_name="Ski Resort" default_value="Grandvalira" datatype="enum" >
+    <EnumValue value="Navacerrada" />
+    <EnumValue value="La Pinilla" />
+    <EnumValue value="Puerto Navacerrada" />
+    <EnumValue value="Valdezcaray" />
+    <EnumValue value="Vallnord" />
+  </UserPref> 
   <Content type="html">
      <![CDATA[ 
        Hello, world!
