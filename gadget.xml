@@ -3,7 +3,9 @@
   <ModulePrefs title="__UP_myname__" 
 	       height="200" 
 	       author="Ignacio Rodriguez" 
-	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
+	       author_email="irodriguez@pegaso.ls.fi.upm.es">
+    <Require feature="dynamic-height" /> 
+  </ModulePrefs>
 
  <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
@@ -27,38 +29,39 @@
    
    <script type="text/javascript">
 
-    // Get userprefs
-    var prefs = new _IG_Prefs(__MODULE_ID__);
-
-    // Based on user input, display personal greeting
-    function displayGreeting (){
-      // Create Date object
-      var today = new Date();
-      // Get current time.
-      var time = today.getTime();
-      var salutation;
-
-      // Based on the time of day, display an appropriate greeting
-      var hour = today.getHours();
-      if (hour < 12)
-        salutation = "Morning";
-      else if (hour > 17)
-        salutation = "Evening";
-      else salutation = "Afternoon";
-
-      // Build HTML string to display message
-      var html = "";
-      var element = document.getElementById('content_div');
-      element.style.height=250;
-
-      // Set the background color according to the mycolor userpref
-
-      // Display a greeting based on the myname userpref
-      html += "<br><h2>Good " + salutation + ", " + "Ignacio !!!</h2><br>"; 
-
-      _gel("content_div").innerHTML = html;
-    }
-    _IG_RegisterOnloadHandler(displayGreeting);
+     // Get userprefs
+     var prefs = new _IG_Prefs(__MODULE_ID__);
+     
+     // Based on user input, display personal greeting
+     function displayGreeting (){
+     // Create Date object
+     var today = new Date();
+     // Get current time.
+     var time = today.getTime();
+     var salutation;
+     
+     // Based on the time of day, display an appropriate greeting
+     var hour = today.getHours();
+     if (hour < 12)
+		salutation = "Morning";
+		else if (hour > 17)
+       salutation = "Evening";
+       else salutation = "Afternoon";
+       
+       // Build HTML string to display message
+       var html = "";
+       var element = document.getElementById('content_div');
+       element.style.height=250;
+       
+       // Set the background color according to the mycolor userpref
+       
+       // Display a greeting based on the myname userpref
+       html += "<br><h2>Good " + salutation + ", " + "Ignacio !!!</h2><br>"; 
+	   
+	   _gel("content_div").innerHTML = html;
+	   }
+	   _IG_RegisterOnloadHandler(displayGreeting);
+	   _IG_AdjustIFrameHeight();
   </script>
      ]]>
  </Content> 
