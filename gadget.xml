@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="hello world example" /> 
+  <ModulePrefs title="Preferences for __UP_myname__" height="250"/>
+  <UserPref name="myname" display_name="Title" required="true" />
   <Content type="html">
      <![CDATA[ 
        Hello, world!
