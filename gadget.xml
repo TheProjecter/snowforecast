@@ -32,8 +32,14 @@
      // Get userprefs
      var prefs = new _IG_Prefs(__MODULE_ID__);
      
+     // Get snowforecast
+     //function getSnowforecast (responseText){
+     
+     
+     //}
+
      // Based on user input, display personal greeting
-     function displayGreeting (){
+     function displaySnowforecast (){
      // Create Date object
      var today = new Date();
      // Get current time.
@@ -59,9 +65,11 @@
        html += "<br><h2>Good " + salutation + ", " + "Ignacio !!!</h2><br>"; 
 	   
 	   _gel("content_div").innerHTML = html;
-	   }
-	   _IG_RegisterOnloadHandler(displayGreeting);
-	   _IG_AdjustIFrameHeight();
+       }
+
+	//_IG_FetchContent(url, getSnowforecast)
+       _IG_RegisterOnloadHandler(displaySnowforecast);
+       _IG_AdjustIFrameHeight();
   </script>
      ]]>
  </Content> 
