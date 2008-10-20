@@ -7,6 +7,13 @@
 
  <UserPref name="myname" display_name="Title" required="true"/>
 
+  <UserPref name="mystation" display_name="Ski Resort" default_value="La-Pinilla" display_value="La Pinilla" datatype="enum" >
+    <EnumValue value="La-Pinilla" display_value="La Pinilla" />
+    <EnumValue value="PuertoDeNavacerrada" display_value="Puerto Navacerrada"/>
+    <EnumValue value="Valdezcaray" display_value="Valdezcaray"/>
+    <EnumValue value="Valdesqui" display_value="Valdesqui"/>
+  </UserPref> 
+
  <Content type="html">
    <![CDATA[ 
        Hello, world!
