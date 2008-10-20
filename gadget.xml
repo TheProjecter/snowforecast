@@ -14,6 +14,12 @@
     <EnumValue value="Valdesqui" display_value="Valdesqui"/>
   </UserPref> 
 
+  <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
+    <EnumValue value="bot" display_value="Bot" />
+    <EnumValue value="mid" display_value="Mid"/>
+    <EnumValue value="Top" display_value="Top"/>
+  </UserPref> 
+
  <Content type="html">
    <![CDATA[ 
        Hello, world!
