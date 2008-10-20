@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="__UP_myname__" 
+  <ModulePrefs title="Ski Resort: __UP_myname__" 
 	       height="200" 
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
+
   <UserPref name="myname" display_name="Title" required="true" />
-  <UserPref name="mystation" display_name="Ski Resort" default_value="Grandvalira" datatype="enum" >
-    <EnumValue value="Navacerrada" />
-    <EnumValue value="La Pinilla" />
-    <EnumValue value="Puerto Navacerrada" />
-    <EnumValue value="Valdezcaray" />
-    <EnumValue value="Vallnord" />
+
+  <UserPref name="mystation" display_name="Ski Resort" default_value="Valdesqui" datatype="enum" >
+    <EnumValue value="La-Pinilla" display_value="La Pinilla" />
+    <EnumValue value="PuertoDeNavacerrada" display_value="Puerto Navacerrada"/>
+    <EnumValue value="Valdezcaray" display_value="Valdezcaray"/>
+    <EnumValue value="Valdesqui" display_value="Valdesqui"/>
   </UserPref> 
+
+  <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
+    <EnumValue value="bot" display_value="Bot" />
+    <EnumValue value="mid" display_value="Mid"/>
+    <EnumValue value="Top" display_value="Top"/>
+  </UserPref> 
+
   <Content type="html">
      <![CDATA[ 
        Hello, world!
      ]]>
   </Content> 
+
 </Module>
