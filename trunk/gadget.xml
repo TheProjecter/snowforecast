@@ -5,7 +5,7 @@
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"/>
 
- <UserPref name="myname" display_name="Title" required="true" default="Snowforecast Info"/>
+ <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
   <UserPref name="mystation" display_name="Ski Resort" default_value="La-Pinilla" datatype="enum" >
     <EnumValue value="La-Pinilla" display_value="La Pinilla" />
