@@ -23,13 +23,34 @@ def XMLSnowForecast(request):
     
     index = 0
     nLines = len(page)
-    f = open("Prueba.txt",'w')
+    days = {}
+    patternColor = re.compile('.*<td bgcolor="(?P<color>.+)" class="cell">.*')
+    patternDay = re.compile('.*<b>(?P<day>.+)</b>.*')
+    patternDayNumer = re.compile('.*<div class="dom">(?P<dayNumber>.+)</div>.*')
+
     while(index < (nLines-1)):
-        f.write(str(index))
-        f.write(" "+page[index]+'\n')
-        if re.match('   <table class="forecasts"> ', page[index]):
-            print index, page[index]
+
+
+        # Search table that have the forecast of the ski-resort
+        if re.match('.*<table class="forecasts">.*', page[index]):
+            
+            # Read the table
+            while(not (re.match('.*</table>.*', page[index]))):
+
+                # Get color background days
+                if patternColor.search(page[index]):
+                    result = patternColor.search(page[index])
+                    color = result.group('color')
+
+                # Get name day
+                if patternDay.search(page[index]):
+                    result = patternDay.search(page[index])
+                    
+                    
+                # Search the follow line
+                index+=1
+ 
         index+=1
-    f.close()
+
     # Return XML Conversion
     return HttpResponse("OK", status=200)
