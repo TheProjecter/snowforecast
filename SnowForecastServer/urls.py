@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+import re
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -14,4 +15,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/(.*)', admin.site.root),
+
+    # Snowforecast
+    (r'snowforecast/$', 'SnowForecastServer.Forecast.views.XMLSnowForecast'),
 )
