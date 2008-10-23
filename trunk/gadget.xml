@@ -35,7 +35,7 @@
     _IG_FetchXmlContent(url, function (response) {
            if (response == null || typeof(response) != "object" || 
                       response.firstChild == null) {
-              _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+              _gel("content_div").innerHTML = "<br>"+url+"</br>"+<i>Invalid data.</i>";
               return;
            }
 
