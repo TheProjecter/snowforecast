@@ -42,6 +42,7 @@
      var height = prefs.getString("myheight");
      var urlFinal = url+height;
      html+="Prueba2";
+     html+="<br>"+url+"</br>";
      html+="<br>"+urlFinal+"</br>";
 
      //_IG_FetchXmlContent(urlFinal, function (response) {
