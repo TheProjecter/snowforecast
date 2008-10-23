@@ -30,7 +30,7 @@
     // XML snowforecast
     
     var prefs = new _IG_Prefs(__MODULE_ID__);
-    var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url=prefs.getString("mystation")+prefs.getString("myheight");
+    var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="+prefs.getString("mystation")+prefs.getString("myheight");
  
     _IG_FetchXmlContent(url, function (response) {
            if (response == null || typeof(response) != "object" || 
