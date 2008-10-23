@@ -37,10 +37,10 @@
      // Based on user input, display personal greeting
      function displaySnowforecast (){
      
-     var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="
-     var prevision = prefs.getString("mystation")
-     var height = prefs.getString("myheight")
-     var urlFinal = url+height
+     var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url=";
+     var prevision = prefs.getString("mystation");
+     var height = prefs.getString("myheight");
+     var urlFinal = url+height;
      html+="Prueba2";
      html+=urlFinal;
 
