@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SNOWFORECAST>
+  <FORECAST>
+
+    <DAYSLINE>
+      {% for day in days %}
+      <DAYNAME>{{day.day}}</DAYNAME>
+      <DAYNUMBER>{{day.dayNumber}}</DAYNUMBER>
+      <DAYCOLOR>{{day.color}}</DAYCOLOR>
+      <TIME>{{day.time}}</TIME>
+      {% endfor %}
+    </DAYSLINE>
+
+    <PICTURELINE>
+      {% for picture in pictures %}
+      <PICTUREWEATHER>{{picture}}</PICTUREWEATHER>
+      {% endfor %}
+    </PICTURELINE>
+
+    <WINDLINE>
+      {% for picture in wind %}
+      <PICTUREWIND>{{picture}}</PICTUREWIND>
+      {% endfor %}
+    </WINDLINE>
+
+    <SUMARYLINE>
+      {% for summary in summaries %}
+      <SUMMARY>{{summary}}</SUMMARY>
+      {% endfor %}
+    </SUMARYLINE>
+
+    <SNOWLINE>
+      {% for snow in snows %}
+      <SNOW>{{snow}}</SNOW>
+      {% endfor %}
+    </SNOWLINE>
+
+    <RAINLINE>
+      {% for rain in rains %}
+      <RAIN>{{rain}}</RAIN>
+      {% endfor %}
+    </RAINLINE>   
+      
+    <MAXLINE>
+      {% for max in maxs %}
+      <MAXCOLOR>{{max.color}}</MAXCOLOR>
+      <MAXTEMP>{{max.temp}}</MAXTEMP>
+      {% endfor %}
+    </MAXLINE>
+
+    <MINLINE>
+      {% for max in maxs %}
+      <MINCOLOR>{{max.color}}</MINCOLOR>
+      <MINTEMP>{{max.temp}}</MINTEMP>
+      {% endfor %}
+    </MINLINE>
+
+    <SENSATIONLINE>
+      {% for sensation in sensations %}
+      <SENSATION>{{sensation}}</SENSATION>
+      {% endfor %}
+    </SENSATIONLINE>
+
+    <FREEZINGLINE>
+      {% for freezing in freezings %}
+      <FREEZING>{{freezing}}</FREEZING>
+      {% endfor %}
+    </FREEZINGLINE>
+
+
+  </FORECAST>
+</SNOWFORECAST>
