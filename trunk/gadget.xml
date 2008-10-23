@@ -29,6 +29,7 @@
    <p>Prueba</p>
    <script type="text/javascript">
      var html ="";
+     var error = 0;
      
      // Get userprefs
      var prefs = new _IG_Prefs(__MODULE_ID__);
@@ -49,12 +50,14 @@
      if (response == null || typeof(response) != "object" || 
      response.firstChild == null) {
      _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+     error = 1;
      }
-
+     error = 2;
      html+="<p>Hola mundo</p>";
      
      
     })
+     html+= "<br>"+error+"</br>";
      html+="<p>Hola mundo2</p>";
      _gel("content_div").innerHTML = html;
      }
