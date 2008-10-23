@@ -28,10 +28,11 @@
  <div id="content_div" style="font-size:12pt; padding:5px;">
    <p>Prueba</p>
    <script type="text/javascript">
-     html+="Prueba1";
-     // Get userprefs
-    // var prefs = new _IG_Prefs(__MODULE_ID__);
+     var html ="";
      
+     // Get userprefs
+     var prefs = new _IG_Prefs(__MODULE_ID__);
+     html+="Prueba1";
      // Based on user input, display personal greeting
      function displaySnowforecast (){
      //var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="
