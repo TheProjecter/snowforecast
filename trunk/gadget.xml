@@ -38,12 +38,12 @@
      function displaySnowforecast (){
      
      var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url=";
-     var prevision = prefs.getString("mystation");
+     var skiresort = prefs.getString("mystation");
      var height = prefs.getString("myheight");
-     var urlFinal = url+height;
+     var urlFinal = url+skiresort+height;
      html+="Prueba2";
-     html+="<br>"+url+"</br>";
      html+="<br>"+urlFinal+"</br>";
+
 
      //_IG_FetchXmlContent(urlFinal, function (response) {
      //if (response == null || typeof(response) != "object" || 
