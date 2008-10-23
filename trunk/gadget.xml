@@ -28,7 +28,7 @@
  <div id="content_div" style="font-size:12pt; padding:5px;">
    <p>Prueba</p>
    <script type="text/javascript">
-     html+="<br>Prueba1</br>"
+     html+="<br>Prueba1</br>";
      // Get userprefs
     // var prefs = new _IG_Prefs(__MODULE_ID__);
      
@@ -39,7 +39,7 @@
      //var height = prefs.getString("myheight")
      //var urlFinal = url+height
      //var html = ""
-     html+="<br>Prueba2</br>"     
+     html+="<br>Prueba2</br>";    
 
      //_IG_FetchXmlContent(urlFinal, function (response) {
      //      if (response == null || typeof(response) != "object" || 
