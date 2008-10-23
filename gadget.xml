@@ -59,7 +59,7 @@
      html+="<p>Hola mundo</p>";}
      
      
-    })
+    });
      html+= "<br>"+error+"</br>";
      html+="<p>Hola mundo2</p>";
      _gel("content_div").innerHTML = html;
