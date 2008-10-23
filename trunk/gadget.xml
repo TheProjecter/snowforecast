@@ -53,9 +53,11 @@
      }
 
      html+="<p>Hola mundo</p>";
-     _gel("content_div").innerHTML = html;
+     
      
     })
+     html+="<p>Hola mundo2</p>";
+     _gel("content_div").innerHTML = html;
      }
      _IG_RegisterOnloadHandler(displaySnowforecast);
      _IG_AdjustIFrameHeight();
