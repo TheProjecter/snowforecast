@@ -8,6 +8,8 @@ def GetFirtsLine(lines):
     patternDayNumber = re.compile('.*<div class="dom">(?P<dayNumber>.+)</div>.*')
     firtsDay = 31
     finalDay = 0
+    list = []
+    time = []
 
     for line in lines:
         if (patternColor.search(line)):
@@ -21,7 +23,7 @@ def GetFirtsLine(lines):
         if (patternDayNumber.search(line)):
             result = patternDayNumber.search(line)
             dayNumber = result.group('dayNumber')
-
+            list.append({'day':day,'dayNumber':dayNumber,'color':color})
             if (int(dayNumber)> (finalDay)):
                 finalDay = int(dayNumber)
 
@@ -34,6 +36,7 @@ def GetFirtsLine(lines):
                 columns[day]=(color, int(dayNumber), n)
             else:
                 columns[day]=(color, int(dayNumber), 1)
+        
 
     for index in columns.keys():
         color, dayNumber, n = columns[index]
@@ -41,21 +44,34 @@ def GetFirtsLine(lines):
         if dayNumber == firtsDay:
             if (n == 3):
                 columns[index] = (color, dayNumber, ["Morning", "Afternoon", "Night"])
+                time = time + ["Morning", "Afternoon", "Night"]        
             if (n == 2):
                 columns[index] = (color, dayNumber, ["Afternoon", "Night"])
+                time = time + ["Afternoon", "Night"]
             if (n == 1):
                 columns[index] = (color, dayNumber, ["Night"])
+                time = time + ["Night"]
         
         elif dayNumber == finalDay:
             if (n == 3):
                 columns[index] = (color, dayNumber, ["Morning", "Afternoon", "Night"])
+                time = time + ["Morning", "Afternoon", "Night"]
             if (n == 2):
                 columns[index] = (color, dayNumber, ["Morning", "Afternoon"])
+                time = time + ["Morning", "Afternoon"]
             if (n == 1):
                 columns[index] = (color, dayNumber, ["Morning"])
+                time = time + ["Morning"]
         else:
             columns[index] = (color, dayNumber, ["Morning", "Afternoon", "Night"])
-    return columns
+            time = time + ["Morning", "Afternoon", "Night"]
+
+    for index in list:
+        index['time'] = time[0]
+        time.remove(time[0])
+
+    print list
+    return list, time
 
 
 # Get the information of the second line. Get the uri of the pictures in snowforecast
@@ -65,7 +81,7 @@ def GetPictureLine(lines):
     for line in lines:
         if(patternPicture.search(line)):
             result = patternPicture.search(line)
-            icons.append('http://www.snow-forecast.com/'+result.group('url'))
+            icons.append('http://www.snow-forecast.com'+result.group('url'))
     
     return icons
 
@@ -76,7 +92,7 @@ def GetWindLine(lines):
     for line in lines:
         if(patternWind.search(line)):
             result = patternWind.search(line)
-            icons.append('http://www.snow-forecast.com/'+result.group('url'))
+            icons.append('http://www.snow-forecast.com'+result.group('url'))
     return icons
 
 # Get the weather summary
@@ -125,8 +141,7 @@ def GetMaxLine(lines):
             color = result.group('color')
         if(patternTemp.search(line)):
             result = patternTemp.search(line)
-            temp.append((color, result.group('temp').split('</span>')[0]))
-
+            temp.append({'color':color, 'temp':result.group('temp').split('</span>')[0]})
     return temp
 
 
@@ -141,8 +156,7 @@ def GetMinLine(lines):
             color = result.group('color')
         if(patternTemp.search(line)):
             result = patternTemp.search(line)
-            temp.append((color, result.group('temp').split('</span>')[0]))
-
+            temp.append({'color':color, 'temp':result.group('temp').split('</span>')[0]})
     return temp
 
 # Get the sensation termic
@@ -152,8 +166,7 @@ def GetSensationLine(lines):
     for line in lines:
         if(patternTemp.search(line)):
             result = patternTemp.search(line)
-            temp.append(result.group('temp').split('</span>')[0])
-
+            temp.append(result.group('temp').split('</span>')[0])            
     return temp
 
 # Get the sensation termic

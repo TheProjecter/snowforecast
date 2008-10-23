@@ -59,7 +59,7 @@ def XMLSnowForecast(request):
                         line.append(page[index])
                         index+=1
 
-                    color, day, dayNumber, time = Tables.GetFirtsLine(line)
+                    list, time = Tables.GetFirtsLine(line)
                 
                 # Get the weather icons
                 if(patternPictureLine.search(page[index])):
@@ -146,9 +146,12 @@ def XMLSnowForecast(request):
                 index+=1
         index+=1
     # Return XML Conversion
-#    t = loader.get_template('template/xmlConversion.xml')
-#    c = Context({'days':days,'daysNumber':daysNumber,'time':time,'picture':pictureLine,'wind':pictureWindLine,
-#                 'summary':summaryLine,'snow':snowLine,'rain':rainLine, 'maxs':maxLine, 'mins':minLine, 'sensations':sensationLine,
-#                 'freezing':freezingLine})
+    print summaryLine
+    print snowLine
+    print rainLine
+    t = loader.get_template('template/xmlConversion.xml')
+    c = Context({'days':list, 'pictures':pictureLine,'wind':pictureWindLine,'summaries':summaryLine,'snows':snowLine,'rains':rainLine, 
+                 'maxs':maxLine, 'mins':minLine, 'sensations':sensationLine, 'freezings':freezingLine})
                  
-#    return HttpResponse(t.render(c), status=200, mimetype='text/xml')
+    return HttpResponse(t.render(c), status=200, mimetype='text/xml')
+    #return HttpResponse("OK", status=200)
