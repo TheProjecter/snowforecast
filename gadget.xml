@@ -26,9 +26,9 @@
    <![CDATA[ 
 
  <div id="content_div" style="font-size:12pt; padding:5px;">
-   
+   <p>Prueba</p>
    <script type="text/javascript">
-
+     html+="Prueba1"
      // Get userprefs
      var prefs = new _IG_Prefs(__MODULE_ID__);
      
@@ -40,22 +40,26 @@
      var urlFinal = url+height
      var html = ""
      
+     html+="Prueba2"
      _IG_FetchXmlContent(urlFinal, function (response) {
            if (response == null || typeof(response) != "object" || 
                       response.firstChild == null) {
               _gel("content_div").innerHTML = "<i>Invalid data.</i>";
               return;
            }
+     html+="Prueba3"
      html+="<p>Hola mundo</p>"
       _gel("content_div").innerHTML = html;
-     
+     html+="Prueba4"
 
 
     })
      }
+     html+="Prueba5"
      _IG_RegisterOnloadHandler(displaySnowforecast);
      _IG_AdjustIFrameHeight();
   </script>
+   html+="Prueba6"
      ]]>
  </Content> 
 </Module>
