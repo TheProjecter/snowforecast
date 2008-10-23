@@ -9,17 +9,17 @@
 
  <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
-  <UserPref name="mystation" display_name="Ski Resort" default_value="La-Pinilla" datatype="enum" >
-    <EnumValue value="La-Pinilla" display_value="La Pinilla" />
-    <EnumValue value="PuertoDeNavacerrada" display_value="Puerto Navacerrada"/>
-    <EnumValue value="Valdezcaray" display_value="Valdezcaray"/>
-    <EnumValue value="Valdesqui" display_value="Valdesqui"/>
+  <UserPref name="mystation" display_name="Ski Resort" default_value="http://www.snow-forecast.com/resorts/La-Pinilla/6day/" datatype="enum" >
+    <EnumValue value="http://www.snow-forecast.com/resorts/La-Pinilla/6day/" display_value="La Pinilla" />
+    <EnumValue value="http://www.snow-forecast.com/resorts/PuertoDeNavacerrada/6day/" display_value="Puerto Navacerrada"/>
+    <EnumValue value="http://www.snow-forecast.com/resorts/Valdezcaray/6day/" display_value="Valdezcaray"/>
+    <EnumValue value="http://www.snow-forecast.com/resorts/Valdesqui/6day/" display_value="Valdesqui"/>
   </UserPref> 
 
   <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
     <EnumValue value="bot" display_value="Bot" />
     <EnumValue value="mid" display_value="Mid"/>
-    <EnumValue value="Top" display_value="Top"/>
+    <EnumValue value="top" display_value="Top"/>
   </UserPref> 
 
  <Content type="html">
@@ -32,44 +32,29 @@
      // Get userprefs
      var prefs = new _IG_Prefs(__MODULE_ID__);
      
-     // Get snowforecast
-     //function getSnowforecast (responseText){
-     
-     
-     //}
-
      // Based on user input, display personal greeting
      function displaySnowforecast (){
-     // Create Date object
-     var today = new Date();
-     // Get current time.
-     var time = today.getTime();
-     var salutation;
+     var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="
+     var prevision = prefs.getString("mystation")
+     var height = prefs.getString("myheight")
+     var urlFinal = url+height
+     var html = ""
      
-     // Based on the time of day, display an appropriate greeting
-     var hour = today.getHours();
-     if (hour < 12)
-		salutation = "Morning";
-		else if (hour > 17)
-       salutation = "Evening";
-       else salutation = "Afternoon";
-       
-       // Build HTML string to display message
-       var html = "";
-       var element = document.getElementById('content_div');
-       element.style.height=250;
-       
-       // Set the background color according to the mycolor userpref
-       
-       // Display a greeting based on the myname userpref
-       html += "<br><h2>Good " + salutation + ", " + "Ignacio !!!</h2><br>"; 
-	   
-	   _gel("content_div").innerHTML = html;
-       }
+     _IG_FetchXmlContent(urlFinal, function (response) {
+           if (response == null || typeof(response) != "object" || 
+                      response.firstChild == null) {
+              _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+              return;
+           }
+     html+="<p>Hola mundo</p>"
+      _gel("content_div").innerHTML = html;
+     
 
-	//_IG_FetchContent(url, getSnowforecast)
-       _IG_RegisterOnloadHandler(displaySnowforecast);
-       _IG_AdjustIFrameHeight();
+
+    })
+     }
+     _IG_RegisterOnloadHandler(displaySnowforecast);
+     _IG_AdjustIFrameHeight();
   </script>
      ]]>
  </Content> 
