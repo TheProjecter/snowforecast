@@ -45,17 +45,17 @@
      html+="<br>"+urlFinal+"</br>";
 
 
-     //_IG_FetchXmlContent(urlFinal, function (response) {
-     //if (response == null || typeof(response) != "object" || 
-     //                 response.firstChild == null) {
-     //         _gel("content_div").innerHTML = "<i>Invalid data.</i>";
-     //         return;
-     //      }
+     _IG_FetchXmlContent(urlFinal, function (response) {
+     if (response == null || typeof(response) != "object" || 
+     response.firstChild == null) {
+     _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+     return;
+     }
 
-     //html+="<p>Hola mundo</p>"
+     html+="<p>Hola mundo</p>";
      _gel("content_div").innerHTML = html;
      
-    //})
+    })
      }
      _IG_RegisterOnloadHandler(displaySnowforecast);
      _IG_AdjustIFrameHeight();
