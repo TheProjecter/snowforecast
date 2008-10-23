@@ -45,7 +45,7 @@
      html+="Prueba2";
      html+="<br>"+urlFinal+"</br>";
 
-
+     alert("response received"); 
      _IG_FetchXmlContent(urlFinal, function (response) {
      alert("response received"); 
      if (response == null || typeof(response) != "object" || 
