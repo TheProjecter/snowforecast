@@ -28,38 +28,35 @@
  <div id="content_div" style="font-size:12pt; padding:5px;">
    <p>Prueba</p>
    <script type="text/javascript">
-     html+="Prueba1"
+     html+="<br>Prueba1</br>"
      // Get userprefs
-     var prefs = new _IG_Prefs(__MODULE_ID__);
+    // var prefs = new _IG_Prefs(__MODULE_ID__);
      
      // Based on user input, display personal greeting
      function displaySnowforecast (){
-     var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="
-     var prevision = prefs.getString("mystation")
-     var height = prefs.getString("myheight")
-     var urlFinal = url+height
-     var html = ""
+     //var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="
+     //var prevision = prefs.getString("mystation")
+     //var height = prefs.getString("myheight")
+     //var urlFinal = url+height
+     //var html = ""
+     html+="<br>Prueba2</br>"     
+
+     //_IG_FetchXmlContent(urlFinal, function (response) {
+     //      if (response == null || typeof(response) != "object" || 
+     //                 response.firstChild == null) {
+     //         _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+     //         return;
+     //      }
+
+     //html+="<p>Hola mundo</p>"
+     _gel("content_div").innerHTML = html;
      
-     html+="Prueba2"
-     _IG_FetchXmlContent(urlFinal, function (response) {
-           if (response == null || typeof(response) != "object" || 
-                      response.firstChild == null) {
-              _gel("content_div").innerHTML = "<i>Invalid data.</i>";
-              return;
-           }
-     html+="Prueba3"
-     html+="<p>Hola mundo</p>"
-      _gel("content_div").innerHTML = html;
-     html+="Prueba4"
-
-
-    })
+    //})
      }
-     html+="Prueba5"
      _IG_RegisterOnloadHandler(displaySnowforecast);
      _IG_AdjustIFrameHeight();
   </script>
-   html+="Prueba6"
+
      ]]>
  </Content> 
 </Module>
