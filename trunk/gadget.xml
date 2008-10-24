@@ -40,7 +40,14 @@
            }
 
          // Close up div
-         html += "Prueba</div>";
+         var html = "<div style='padding: 5px;background-color: #ccf;font-family:Arial, Helvetica;" +                   
+				 "text-align:left;font-size:90%'>";
+
+         html +="<div style='text-align:center; font-size: 120%; color: yellow; " +
+		             "font-weight: 700;'>"; 
+
+         html += url + "</div><br>"; 
+         html += "</div>";
 
         // Display HTML string in <div>
         _gel('content_div').innerHTML = html; 
