@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="__UP_myname__: __UP_myprevision__" height="325"
+<ModulePrefs title="__UP_myname__" height="325"
 	     description="View GFS model Europe" 
 	     author="Ignacio Rodriguez" 
 	     author_email="irodriguez@pegaso.ls.fi.upm.es" 
@@ -32,7 +32,7 @@
       
 <Content type="html"> 
 <![CDATA[ 
-<div id="content_div" style="font-size:10pt; font-family:Arial, Helvetica; text-align:center; padding:5px;">
+<div id="content_div" style="font-size:10pt; font-family:Arial, Helvetica; text-align:center; padding:2px;">
 <script type="text/javascript">
 
 // get user preferences
@@ -89,29 +89,6 @@ var words = new Array();
 var height = new Array();
 var ranPics = new Array();
 
-// get photos, infos, and heights; normalize photo sizes
-// randomize picture that initially shows up in big area
-for(var i = 0; i < arraySize; i++) { 
-	if(i < arraySize - 1) {
-		pics[i] = prefs.getString("myphoto" + i);
-		if((prefs.getString("myphoto" + i) != "http://") && (prefs.getString("myphoto" + i) != "")) {
-			ranPics[flag] = pics[i];
-			flag++;
-		}
-		//words[i] = prefs.getString("mytext" + i);
-		height[i] = "40";
-	
-		if(parseInt(height[i]) > limitA) height[i] = limitA;
-		if((parseInt(height[i]) < limitB) && (parseInt(height[i]) > 0)) height[i] = limitB;
-	} else {
-		if(flag==0) {
-			pics[i] = "http://www.adrianakovashka.com/colors.jpg";
-		} else {
-			ranNum = Math.floor(flag*Math.random()+1);
-			pics[i] = ranPics[ranNum];
-		}		
-	}
-}
 
 pics = picsGFS;
 
@@ -142,12 +119,12 @@ function showGadget (){
     html += ' <a align="center" onmousedown=mouseClickNext()><img src="http://aovechki.googlepages.com/next.gif"></a>';
 	
 
-    // display info about picture
+    // display picture
     html += "<hr>"
     html += '<br><div id="ranPic"><img border=0 src="' + pics[0] +prefs.getString('myprevision')+ '"name="im" height=251></div>';
     html += "<br";
     
-    // render html (line copied from another gadget source code) 
+   // render html (line copied from another gadget source code) 
     _gel("content_div").innerHTML = html;
 }
 
