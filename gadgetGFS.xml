@@ -134,6 +134,7 @@ function showGadget (){
     html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="ttp://aovechki.googlepages.com/prev.gif"></a>';
     html += '<a align="center" onmousedown=mouseClickNext('+j+')><img src="ttp://aovechki.googlepages.com/next.gif"></a>';
 	
+
     // display info about picture
     html += "<hr>";   
     //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
