@@ -145,6 +145,7 @@ function mouseClickNext(){
 		+ pics[j] +prefs.getString('myprevision')+ '"name="im" height=251></a></div>';
            _gel("ranPic").innerHTML = img;
 }
+}
 
 </script>
 
