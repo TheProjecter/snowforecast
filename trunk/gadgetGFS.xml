@@ -135,7 +135,7 @@ function showGadget (){
 
     // display info about picture
     html += "<hr>"
-    html += '<br><div id="ranPic"><img border=0 src="' + pics['+j+'] + '"name="im" height=251></div>';
+    html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=251></div>';
     html += "<br";
     
     // render html (line copied from another gadget source code) 
