@@ -132,7 +132,7 @@ function showGadget (){
 	//}
 	
 	// display info about picture
-    html += "<hr>";   
+    //html += "<hr>";   
     //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
     html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=241></div>';
     html += "<br";
