@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs title="__UP_myname__" height="300"
-	     description="View your favorite pictures on your Google homepage" 
+	     description="View GFS model Europe" 
 	     author="Ignacio Rodriguez" 
 	     author_email="irodriguez@pegaso.ls.fi.upm.es" 
 	     scaling="false" scrolling="true"/>
@@ -129,10 +129,13 @@ function showGadget (){
 	//		html += '<a onmousedown=mouseClick(' + j + ')><img src="' + pics[j] + '"height="' + height[j] + '"></a>';
 	//		html += " ";
 	//	}
-	//}
 	
-	// display info about picture
-    //html += "<hr>";   
+
+    html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="ttp://aovechki.googlepages.com/prev.gif"></a>';
+    html += '<a align="center" onmousedown=mouseClickNext('+j+')><img src="ttp://aovechki.googlepages.com/next.gif"></a>';
+	
+    // display info about picture
+    html += "<hr>";   
     //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
     html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=241></div>';
     html += "<br";
