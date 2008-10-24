@@ -132,8 +132,8 @@ function showGadget (){
 	//	}
 	
 
-    html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="http://aovechki.googlepages.com/prev.gif"></a>';
-    html += ' <a align="center" onmousedown=mouseClickNext('+j+')><img src="http://aovechki.googlepages.com/next.gif"></a>';
+    html += '<div align="center"><a align="center" onmousedown=mouseClickPrev('+j+')><img src="http://aovechki.googlepages.com/prev.gif"></a>';
+    html += ' <a align="center" onmousedown=mouseClickNext('+j+')><img src="http://aovechki.googlepages.com/next.gif"></a></div>';
 	
 
     // display info about picture
