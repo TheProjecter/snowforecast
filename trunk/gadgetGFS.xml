@@ -20,56 +20,7 @@
         <EnumValue value="RoyalBlue"/>
         <EnumValue value="MidnightBlue"/>        
     </UserPref>
-    
-    <UserPref name="myphoto0" display_name="Photo 1" default_value="http://"/>
-    <UserPref name="mytext0" display_name="Text for Photo 1" default_value="Use the Edit option to specify up to 10 pictures to display on your Google homepage."/>
-    <UserPref name="myheight0" display_name="Height for Photo 1" default_value="30"/>
-    <UserPref name="use0" display_name="Use Photo 1?" datatype="bool" default_value="true"/>
-    
-    <UserPref name="myphoto1" display_name="Photo 2" default_value="http://"/>
-    <UserPref name="mytext1" display_name="Text for Photo 2" default_value="Please give me a picture to display!"/>
-    <UserPref name="myheight1" display_name="Height for Photo 2" default_value="30"/>
-    <UserPref name="use1" display_name="Use Photo 2?" datatype="bool" default_value="true"/>
-    
-    <UserPref name="myphoto2" display_name="Photo 3" default_value="http://"/>
-    <UserPref name="mytext2" display_name="Text for Photo 3" default_value="Edit me!"/>
-    <UserPref name="myheight2" display_name="Height for Photo 3" default_value="30"/>
-    <UserPref name="use2" display_name="Use Photo 3?" datatype="bool" default_value="true"/>
-    
-    <UserPref name="myphoto3" display_name="Photo 4" default_value="http://"/>
-    <UserPref name="mytext3" display_name="Text for Photo 4" default_value="info"/>
-    <UserPref name="myheight3" display_name="Height for Photo 4" default_value="30"/>
-    <UserPref name="use3" display_name="Use Photo 4?" datatype="bool" default_value="false"/>
-    
-    <UserPref name="myphoto4" display_name="Photo 5" default_value="http://"/>
-    <UserPref name="mytext4" display_name="Text for Photo 5" default_value="info"/>
-    <UserPref name="myheight4" display_name="Height for Photo 5" default_value="30"/>
-    <UserPref name="use4" display_name="Use Photo 5?" datatype="bool" default_value="false"/>
-   
-    <UserPref name="myphoto5" display_name="Photo 6" default_value="http://"/>
-    <UserPref name="mytext5" display_name="Text for Photo 6" default_value="info"/>
-    <UserPref name="myheight5" display_name="Height for Photo 6" default_value="30"/>
-    <UserPref name="use5" display_name="Use Photo 6?" datatype="bool" default_value="false"/>
-    
-    <UserPref name="myphoto6" display_name="Photo 7" default_value="http://"/>
-    <UserPref name="mytext6" display_name="Text for Photo 7" default_value="info"/>
-    <UserPref name="myheight6" display_name="Height for Photo 7" default_value="30"/>
-    <UserPref name="use6" display_name="Use Photo 7?" datatype="bool" default_value="false"/>
-    
-    <UserPref name="myphoto7" display_name="Photo 8" default_value="http://"/>
-    <UserPref name="mytext7" display_name="Text for Photo 8" default_value="info"/>
-    <UserPref name="myheight7" display_name="Height for Photo 8" default_value="30"/>
-    <UserPref name="use7" display_name="Use Photo 8?" datatype="bool" default_value="false"/>
-    
-    <UserPref name="myphoto8" display_name="Photo 9" default_value="http://"/>
-    <UserPref name="mytext8" display_name="Text for Photo 9" default_value="info"/>
-    <UserPref name="myheight8" display_name="Height for Photo 9" default_value="30"/>
-    <UserPref name="use8" display_name="Use Photo 9?" datatype="bool" default_value="false"/>
-    
-    <UserPref name="myphoto9" display_name="Photo 10" default_value="http://"/>
-    <UserPref name="mytext9" display_name="Text for Photo 10" default_value="info"/>
-    <UserPref name="myheight9" display_name="Height of Photo 10" default_value="30"/>
-    <UserPref name="use9" display_name="Use Photo 10?" datatype="bool" default_value="false"/>     
+      
 <Content type="html"> 
 <![CDATA[ 
 <div id="content_div" style="font-size:10pt; font-family:Arial, Helvetica; text-align:center; padding:5px;">
@@ -183,7 +134,7 @@ function showGadget (){
 	// display info about picture
     html += "<hr>";   
     //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
-    html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=200></div>';
+    html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=300></div>';
     html += "<br";
     
     // render html (line copied from another gadget source code) 
