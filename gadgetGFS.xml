@@ -48,7 +48,7 @@ var ranNum;
 var j = 0;
 
 
-var picsGFSTemperature = new Array()
+var picsGFS = new Array()
 picsGFS[0] = "http://212.227.101.120/wz/pics/Rtavn06";
 picsGFS[1] = "http://212.227.101.120/wz/pics/Rtavn12";
 picsGFS[2] = "http://212.227.101.120/wz/pics/Rtavn18";
