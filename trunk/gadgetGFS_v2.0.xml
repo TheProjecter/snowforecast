@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="__UP_myname__" height="325"
+	     description="View GFS model Europe" 
+	     author="Ignacio Rodriguez" 
+	     author_email="irodriguez@pegaso.ls.fi.upm.es" 
+	     scaling="false" scrolling="true"/>
+
+<UserPref name="myname" display_name="Nombre Modelo" default_value="Modelo GFS"/>
+     <UserPref name="mycolor" display_name="Color" default_value="Random" datatype="enum">
+        <EnumValue value="Random"/>
+        <EnumValue value="White"/>
+        <EnumValue value="MediumPurple"/>
+        <EnumValue value="Crimson"/>
+        <EnumValue value="Khaki"/>
+        <EnumValue value="SandyBrown"/>
+        <EnumValue value="Gold"/> 
+        <EnumValue value="DarkGreen"/> 
+        <EnumValue value="MediumTurquoise"/>
+        <EnumValue value="RoyalBlue"/>
+        <EnumValue value="MidnightBlue"/>        
+    </UserPref>
+
+     <UserPref name="myprevision" display_name="Modelo" default_value="1s.png" datatype="enum">
+        <EnumValue value="1s.png" display_value="500 hPa Presión"/>
+        <EnumValue value="2s.png" display_value="850 hPa Temperatura"/>
+        <EnumValue value="3s.png" display_value="Viento"/>
+        <EnumValue value="4s.png" display_value="Precipitaciones"/>
+        <EnumValue value="5s.png" display_value="Temperatura 2m"/>
+        <EnumValue value="8s.png" display_value="Viento 10m"/>
+    </UserPref>
+      
+<Content type="html"> 
+<![CDATA[ 
+<div id="content_div" style="font-size:10pt; font-family:Arial, Helvetica; text-align:center; padding:2px;">
+<script type="text/javascript">
+
+// get user preferences
+var prefs = new _IG_Prefs(__MODULE_ID__);
+
+// declare variables
+var count = 0;
+var arraySize = 30;
+var limitA = 50;
+var limitB = 5;
+var flag = 0;
+var ranNum;
+var j = 0;
+
+
+var picsGFS = new Array()
+picsGFS[0] = "http://212.227.101.120/wz/pics/Rtavn06";
+picsGFS[1] = "http://212.227.101.120/wz/pics/Rtavn12";
+picsGFS[2] = "http://212.227.101.120/wz/pics/Rtavn18";
+picsGFS[3] = "http://212.227.101.120/wz/pics/Rtavn24";
+picsGFS[4] = "http://212.227.101.120/wz/pics/Rtavn30";
+picsGFS[5] = "http://212.227.101.120/wz/pics/Rtavn36";
+picsGFS[6] = "http://212.227.101.120/wz/pics/Rtavn42";
+picsGFS[7] = "http://212.227.101.120/wz/pics/Rtavn48";
+picsGFS[8] = "http://212.227.101.120/wz/pics/Rtavn54";
+picsGFS[9] = "http://212.227.101.120/wz/pics/Rtavn60";
+picsGFS[10] = "http://212.227.101.120/wz/pics/Rtavn66";
+picsGFS[11] = "http://212.227.101.120/wz/pics/Rtavn72";
+picsGFS[12] = "http://212.227.101.120/wz/pics/Rtavn78";
+picsGFS[13] = "http://212.227.101.120/wz/pics/Rtavn84";
+picsGFS[14] = "http://212.227.101.120/wz/pics/Rtavn90";
+picsGFS[15] = "http://212.227.101.120/wz/pics/Rtavn96";
+picsGFS[16] = "http://212.227.101.120/wz/pics/Rtavn102";
+picsGFS[17] = "http://212.227.101.120/wz/pics/Rtavn108";
+picsGFS[18] = "http://212.227.101.120/wz/pics/Rtavn114";
+picsGFS[19] = "http://212.227.101.120/wz/pics/Rtavn120";
+picsGFS[20] = "http://212.227.101.120/wz/pics/Rtavn126";
+picsGFS[21] = "http://212.227.101.120/wz/pics/Rtavn132";
+picsGFS[22] = "http://212.227.101.120/wz/pics/Rtavn138";
+picsGFS[23] = "http://212.227.101.120/wz/pics/Rtavn144";
+picsGFS[24] = "http://212.227.101.120/wz/pics/Rtavn150";
+picsGFS[25] = "http://212.227.101.120/wz/pics/Rtavn156";
+picsGFS[26] = "http://212.227.101.120/wz/pics/Rtavn162";
+picsGFS[27] = "http://212.227.101.120/wz/pics/Rtavn168";
+picsGFS[28] = "http://212.227.101.120/wz/pics/Rtavn174";
+picsGFS[29] = "http://212.227.101.120/wz/pics/Rtavn180";
+
+
+
+
+// and arrays	
+var pics = new Array();
+var words = new Array();		
+var height = new Array();
+var ranPics = new Array();
+
+
+pics = picsGFS;
+
+// show gadget - line copied from another gadget source code (modified)
+showGadget();
+
+
+// change to the next picture
+
+
+
+// write html, set color (possibly random), display photo
+function showGadget (){
+    var element = document.getElementById('content_div');
+    if(prefs.getString("mycolor") == "Random") {        
+		var ranR = Math.floor(255*Math.random());
+		var ranG = Math.floor(255*Math.random());
+		var ranB = Math.floor(255*Math.random());
+		element.style.backgroundColor = "#" + ranR.toString(16) + ranG.toString(16) + ranB.toString(16);     
+    } else {
+		element.style.backgroundColor = prefs.getString("mycolor");
+	}
+
+	// write html
+    var html = "";
+
+    html += '<a align="center" onmousedown=mouseClickPrev()><img src="http://aovechki.googlepages.com/prev.gif"></a>';
+    html += ' <a align="center" onmousedown=mouseClickNext()><img src="http://aovechki.googlepages.com/next.gif"></a>';
+	
+
+    // display picture
+    html += "<hr>"
+    html += '<br><div id="ranPic">'+
+	    '<a href="'+ pics[0] +prefs.getString('myprevision') +'" target="_blank"><img border=0 src="' 
+		+ pics[0] +prefs.getString('myprevision')+ '"name="im" height=251></a></div>';
+    html += "<br";
+    
+   // render html (line copied from another gadget source code) 
+    _gel("content_div").innerHTML = html;
+}
+
+
+// change to the previous picture
+function mouseClickPrev(){
+        if (j > 0){
+           j=j-1;
+	   document.im.src = pics[j]+prefs.getString('myprevision');}
+}
+
+// change to the next picture
+function mouseClickNext(){
+        if (j < (arraySize-1)){
+	       j=j+1;
+	       document.im.src = pics[j]+prefs.getString('myprevision');}
+}
+
+</script>
+
+  ]]> 
+  </Content>
+
+</Module>
