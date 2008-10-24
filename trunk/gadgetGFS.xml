@@ -35,7 +35,8 @@ var arraySize = 11;
 var limitA = 50;
 var limitB = 5;
 var flag = 0;
-var ranNum; 
+var ranNum;
+var j = 0;
 
 
 var picsGFSTemperature = new Array()
