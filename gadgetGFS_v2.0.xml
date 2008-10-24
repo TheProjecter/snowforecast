@@ -7,7 +7,7 @@
 	     scaling="false" scrolling="true"/>
 
 <UserPref name="myname" display_name="Nombre Modelo" default_value="Modelo GFS"/>
-     <UserPref name="mycolor" display_name="Color" default_value="Random" datatype="enum">
+     <UserPref name="mycolor" display_name="Color" default_value="White" datatype="enum">
         <EnumValue value="Random"/>
         <EnumValue value="White"/>
         <EnumValue value="MediumPurple"/>
@@ -89,16 +89,10 @@ var words = new Array();
 var height = new Array();
 var ranPics = new Array();
 
-
 pics = picsGFS;
 
 // show gadget - line copied from another gadget source code (modified)
 showGadget();
-
-
-// change to the next picture
-
-
 
 // write html, set color (possibly random), display photo
 function showGadget (){
@@ -133,9 +127,13 @@ function showGadget (){
 
 // change to the previous picture
 function mouseClickPrev(){
+        var img = "";
         if (j > 0){
            j=j-1;
-	   document.im.src = pics[j]+prefs.getString('myprevision');}
+           img = '<a href="'+ pics[j] +prefs.getString('myprevision') +'" target="_blank"><img border=0 src="' 
+		+ pics[j] +prefs.getString('myprevision')+ '"name="im" height=251></a></div>';
+           _gel("ranPic").innerHTML = img;
+	   }
 }
 
 // change to the next picture
