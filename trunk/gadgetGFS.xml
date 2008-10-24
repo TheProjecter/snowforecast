@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="__UP_myname__" height="345" 
+	     description="View your favorite pictures on your Google homepage" 
+	     author="Ignacio Rodriguez" 
+	     author_email="irodriguez@pegaso.ls.fi.upm.es" 
+	     scaling="false" scrolling="true"/>
+
+<UserPref name="myname" display_name="Your name" default_value="Modelo GFS"/>
+     <UserPref name="mycolor" display_name="Color of Gadget" default_value="Random" datatype="enum">
+        <EnumValue value="Random"/>
+        <EnumValue value="White"/>
+        <EnumValue value="MediumPurple"/>
+        <EnumValue value="Crimson"/>
+        <EnumValue value="Khaki"/>
+        <EnumValue value="SandyBrown"/>
+        <EnumValue value="Gold"/> 
+        <EnumValue value="DarkGreen"/> 
+        <EnumValue value="MediumTurquoise"/>
+        <EnumValue value="RoyalBlue"/>
+        <EnumValue value="MidnightBlue"/>        
+    </UserPref>
+    
+    <UserPref name="myphoto0" display_name="Photo 1" default_value="http://"/>
+    <UserPref name="mytext0" display_name="Text for Photo 1" default_value="Use the Edit option to specify up to 10 pictures to display on your Google homepage."/>
+    <UserPref name="myheight0" display_name="Height for Photo 1" default_value="30"/>
+    <UserPref name="use0" display_name="Use Photo 1?" datatype="bool" default_value="true"/>
+    
+    <UserPref name="myphoto1" display_name="Photo 2" default_value="http://"/>
+    <UserPref name="mytext1" display_name="Text for Photo 2" default_value="Please give me a picture to display!"/>
+    <UserPref name="myheight1" display_name="Height for Photo 2" default_value="30"/>
+    <UserPref name="use1" display_name="Use Photo 2?" datatype="bool" default_value="true"/>
+    
+    <UserPref name="myphoto2" display_name="Photo 3" default_value="http://"/>
+    <UserPref name="mytext2" display_name="Text for Photo 3" default_value="Edit me!"/>
+    <UserPref name="myheight2" display_name="Height for Photo 3" default_value="30"/>
+    <UserPref name="use2" display_name="Use Photo 3?" datatype="bool" default_value="true"/>
+    
+    <UserPref name="myphoto3" display_name="Photo 4" default_value="http://"/>
+    <UserPref name="mytext3" display_name="Text for Photo 4" default_value="info"/>
+    <UserPref name="myheight3" display_name="Height for Photo 4" default_value="30"/>
+    <UserPref name="use3" display_name="Use Photo 4?" datatype="bool" default_value="false"/>
+    
+    <UserPref name="myphoto4" display_name="Photo 5" default_value="http://"/>
+    <UserPref name="mytext4" display_name="Text for Photo 5" default_value="info"/>
+    <UserPref name="myheight4" display_name="Height for Photo 5" default_value="30"/>
+    <UserPref name="use4" display_name="Use Photo 5?" datatype="bool" default_value="false"/>
+   
+    <UserPref name="myphoto5" display_name="Photo 6" default_value="http://"/>
+    <UserPref name="mytext5" display_name="Text for Photo 6" default_value="info"/>
+    <UserPref name="myheight5" display_name="Height for Photo 6" default_value="30"/>
+    <UserPref name="use5" display_name="Use Photo 6?" datatype="bool" default_value="false"/>
+    
+    <UserPref name="myphoto6" display_name="Photo 7" default_value="http://"/>
+    <UserPref name="mytext6" display_name="Text for Photo 7" default_value="info"/>
+    <UserPref name="myheight6" display_name="Height for Photo 7" default_value="30"/>
+    <UserPref name="use6" display_name="Use Photo 7?" datatype="bool" default_value="false"/>
+    
+    <UserPref name="myphoto7" display_name="Photo 8" default_value="http://"/>
+    <UserPref name="mytext7" display_name="Text for Photo 8" default_value="info"/>
+    <UserPref name="myheight7" display_name="Height for Photo 8" default_value="30"/>
+    <UserPref name="use7" display_name="Use Photo 8?" datatype="bool" default_value="false"/>
+    
+    <UserPref name="myphoto8" display_name="Photo 9" default_value="http://"/>
+    <UserPref name="mytext8" display_name="Text for Photo 9" default_value="info"/>
+    <UserPref name="myheight8" display_name="Height for Photo 9" default_value="30"/>
+    <UserPref name="use8" display_name="Use Photo 9?" datatype="bool" default_value="false"/>
+    
+    <UserPref name="myphoto9" display_name="Photo 10" default_value="http://"/>
+    <UserPref name="mytext9" display_name="Text for Photo 10" default_value="info"/>
+    <UserPref name="myheight9" display_name="Height of Photo 10" default_value="30"/>
+    <UserPref name="use9" display_name="Use Photo 10?" datatype="bool" default_value="false"/>     
+<Content type="html"> 
+<![CDATA[ 
+<div id="content_div" style="font-size:10pt; font-family:Arial, Helvetica; text-align:center; padding:5px;">
+<script type="text/javascript">
+
+// get user preferences
+var prefs = new _IG_Prefs(__MODULE_ID__);
+
+// declare variables
+var count = 0;
+var arraySize = 11;
+var limitA = 50;
+var limitB = 5;
+var flag = 0;
+var ranNum; 
+
+
+var picsGFSTemperature = new Array()
+picsGFSTemperature[0] = "http://212.227.101.120/wz/pics/Rtavn062s.png";
+picsGFSTemperature[1] = "http://212.227.101.120/wz/pics/Rtavn122s.png";
+picsGFSTemperature[2] = "http://212.227.101.120/wz/pics/Rtavn182s.png";
+picsGFSTemperature[3] = "http://212.227.101.120/wz/pics/Rtavn242s.png";
+picsGFSTemperature[4] = "http://212.227.101.120/wz/pics/Rtavn302s.png";
+picsGFSTemperature[5] = "http://212.227.101.120/wz/pics/Rtavn362s.png";
+picsGFSTemperature[6] = "http://212.227.101.120/wz/pics/Rtavn422s.png";
+picsGFSTemperature[7] = "http://212.227.101.120/wz/pics/Rtavn482s.png";
+picsGFSTemperature[8] = "http://212.227.101.120/wz/pics/Rtavn542s.png";
+picsGFSTemperature[9] = "http://212.227.101.120/wz/pics/Rtavn602s.png";
+picsGFSTemperature[10] = "http://212.227.101.120/wz/pics/Rtavn662s.png";
+picsGFSTemperature[11] = "http://212.227.101.120/wz/pics/Rtavn722s.png";
+picsGFSTemperature[12] = "http://212.227.101.120/wz/pics/Rtavn782s.png";
+picsGFSTemperature[13] = "http://212.227.101.120/wz/pics/Rtavn842s.png";
+picsGFSTemperature[14] = "http://212.227.101.120/wz/pics/Rtavn902s.png";
+picsGFSTemperature[15] = "http://212.227.101.120/wz/pics/Rtavn962s.png";
+picsGFSTemperature[16] = "http://212.227.101.120/wz/pics/Rtavn1022s.png";
+picsGFSTemperature[17] = "http://212.227.101.120/wz/pics/Rtavn1082s.png";
+picsGFSTemperature[18] = "http://212.227.101.120/wz/pics/Rtavn1142s.png";
+picsGFSTemperature[19] = "http://212.227.101.120/wz/pics/Rtavn1202s.png";
+picsGFSTemperature[20] = "http://212.227.101.120/wz/pics/Rtavn1262s.png";
+picsGFSTemperature[21] = "http://212.227.101.120/wz/pics/Rtavn1322s.png";
+picsGFSTemperature[22] = "http://212.227.101.120/wz/pics/Rtavn1382s.png";
+picsGFSTemperature[23] = "http://212.227.101.120/wz/pics/Rtavn1442s.png";
+picsGFSTemperature[24] = "http://212.227.101.120/wz/pics/Rtavn1502s.png";
+picsGFSTemperature[25] = "http://212.227.101.120/wz/pics/Rtavn1562s.png";
+picsGFSTemperature[26] = "http://212.227.101.120/wz/pics/Rtavn1622s.png";
+picsGFSTemperature[27] = "http://212.227.101.120/wz/pics/Rtavn1682s.png";
+picsGFSTemperature[28] = "http://212.227.101.120/wz/pics/Rtavn1742s.png";
+picsGFSTemperature[29] = "http://212.227.101.120/wz/pics/Rtavn1802s.png";
+
+
+
+
+// and arrays	
+var pics = new Array();
+var words = new Array();		
+var height = new Array();
+var ranPics = new Array();
+
+// get photos, infos, and heights; normalize photo sizes
+// randomize picture that initially shows up in big area
+for(var i = 0; i < arraySize; i++) { 
+	if(i < arraySize - 1) {
+		pics[i] = prefs.getString("myphoto" + i);
+		if((prefs.getString("myphoto" + i) != "http://") && (prefs.getString("myphoto" + i) != "")) {
+			ranPics[flag] = pics[i];
+			flag++;
+		}
+		//words[i] = prefs.getString("mytext" + i);
+		height[i] = "40";
+	
+		if(parseInt(height[i]) > limitA) height[i] = limitA;
+		if((parseInt(height[i]) < limitB) && (parseInt(height[i]) > 0)) height[i] = limitB;
+	} else {
+		if(flag==0) {
+			pics[i] = "http://www.adrianakovashka.com/colors.jpg";
+		} else {
+			ranNum = Math.floor(flag*Math.random()+1);
+			pics[i] = ranPics[ranNum];
+		}		
+	}
+}
+
+// show gadget - line copied from another gadget source code (modified)
+showGadget();
+
+// write html, set color (possibly random), display photo and text
+function showGadget (){
+    var element = document.getElementById('content_div');
+    if(prefs.getString("mycolor") == "Random") {        
+		var ranR = Math.floor(255*Math.random());
+		var ranG = Math.floor(255*Math.random());
+		var ranB = Math.floor(255*Math.random());
+		element.style.backgroundColor = "#" + ranR.toString(16) + ranG.toString(16) + ranB.toString(16);     
+    } else {
+		element.style.backgroundColor = prefs.getString("mycolor");
+	}
+
+	// write html
+    var html = "";
+
+	// display thumbnails if photos provided
+	//for(var j = 0; j < arraySize - 1; j++) {
+	//	if(prefs.getBool("use" + j) == true) {
+	//		html += '<a onmousedown=mouseClick(' + j + ')><img src="' + pics[j] + '"height="' + height[j] + '"></a>';
+	//		html += " ";
+	//	}
+	//}
+	
+	// display info about picture
+    html += "<hr>";   
+    //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
+    html += '<br><div id="ranPic"><img border=0 src="' + pics[10] + '"name="im" height=200></div>';
+    html += "<br";
+    
+    // render html (line copied from another gadget source code) 
+    _gel("content_div").innerHTML = html;
+}
+
+// update big photo / info on click
+function mouseClick(picnum) {
+	document.im.src = pics[picnum];
+	document.getElementById('txt').innerHTML=words[picnum];
+}
+
+</script>
+
+  ]]> 
+  </Content>
+
+</Module>
