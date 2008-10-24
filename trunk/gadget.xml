@@ -10,10 +10,10 @@
  <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
   <UserPref name="mystation" display_name="Ski Resort" default_value="http://www.snow-forecast.com/resorts/La-Pinilla/6day/" datatype="enum" >
-    <EnumValue value="http://www.snow-forecast.com/resorts/La-Pinilla/6day/" display_value="La Pinilla" />
-    <EnumValue value="http://www.snow-forecast.com/resorts/PuertoDeNavacerrada/6day/" display_value="Puerto Navacerrada"/>
-    <EnumValue value="http://www.snow-forecast.com/resorts/Valdezcaray/6day/" display_value="Valdezcaray"/>
-    <EnumValue value="http://www.snow-forecast.com/resorts/Valdesqui/6day/" display_value="Valdesqui"/>
+    <EnumValue value="snow-forecast.com/resorts/La-Pinilla/6day/" display_value="La Pinilla" />
+    <EnumValue value="snow-forecast.com/resorts/PuertoDeNavacerrada/6day/" display_value="Puerto Navacerrada"/>
+    <EnumValue value="snow-forecast.com/resorts/Valdezcaray/6day/" display_value="Valdezcaray"/>
+    <EnumValue value="snow-forecast.com/resorts/Valdesqui/6day/" display_value="Valdesqui"/>
   </UserPref> 
 
   <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
@@ -30,10 +30,10 @@
     // XML snowforecast
     
     var prefs = new _IG_Prefs(__MODULE_ID__);
-    var url = "http://pallas.ls.fi.upm.es/SnowForecastServer/snowforecast?url="+prefs.getString("mystation")+prefs.getString("myheight");
+    var url = "http://pallas.ls.fi.upm.es/forecast/"+prefs.getString("mystation")+prefs.getString("myheight")+"snowforecast.xml";
     var url2 = "http://doc.examples.googlepages.com/breakfast-data.xml"; 
  
-    _IG_FetchXmlContent(url2, function (response) {
+    _IG_FetchXmlContent(url, function (response) {
            if (response == null || typeof(response) != "object" || 
                       response.firstChild == null) {
               _gel("content_div").innerHTML = "<br>"+url+"</br>"+"<i>Invalid data.</i>";
