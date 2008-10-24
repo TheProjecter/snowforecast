@@ -138,9 +138,12 @@ function mouseClickPrev(){
 
 // change to the next picture
 function mouseClickNext(){
+        var img = "";
         if (j < (arraySize-1)){
 	       j=j+1;
-	       document.im.src = pics[j]+prefs.getString('myprevision');}
+           img = '<a href="'+ pics[j] +prefs.getString('myprevision') +'" target="_blank"><img border=0 src="' 
+		+ pics[j] +prefs.getString('myprevision')+ '"name="im" height=251></a></div>';
+           _gel("ranPic").innerHTML = img;
 }
 
 </script>
