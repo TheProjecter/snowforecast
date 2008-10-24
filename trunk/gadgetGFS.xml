@@ -31,7 +31,7 @@ var prefs = new _IG_Prefs(__MODULE_ID__);
 
 // declare variables
 var count = 0;
-var arraySize = 11;
+var arraySize = 30;
 var limitA = 50;
 var limitB = 5;
 var flag = 0;
@@ -109,7 +109,12 @@ pics = picsGFSTemperature;
 // show gadget - line copied from another gadget source code (modified)
 showGadget();
 
-// write html, set color (possibly random), display photo and text
+
+// change to the next picture
+
+
+
+// write html, set color (possibly random), display photo
 function showGadget (){
     var element = document.getElementById('content_div');
     if(prefs.getString("mycolor") == "Random") {        
@@ -124,32 +129,32 @@ function showGadget (){
 	// write html
     var html = "";
 
-	// display thumbnails if photos provided
-	//for(var j = 0; j < arraySize - 1; j++) {
-	//	if(prefs.getBool("use" + j) == true) {
-	//		html += '<a onmousedown=mouseClick(' + j + ')><img src="' + pics[j] + '"height="' + height[j] + '"></a>';
-	//		html += " ";
-	//	}
-	
-
-    html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="http://aovechki.googlepages.com/prev.gif"></a>';
-    html += ' <a align="center" onmousedown=mouseClickNext('+j+')><img src="http://aovechki.googlepages.com/next.gif"></a>';
+    html += '<a align="center" onmousedown=mouseClickPrev()><img src="http://aovechki.googlepages.com/prev.gif"></a>';
+    html += ' <a align="center" onmousedown=mouseClickNext()><img src="http://aovechki.googlepages.com/next.gif"></a>';
 	
 
     // display info about picture
-    html += "<hr>";   
-    //html += '<div id="txt">' + prefs.getString("mytext0") + '</div><br>';
-    html += '<br><div id="ranPic"><img border=0 src="' + pics[0] + '"name="im" height=251></div>';
+    html += "<hr>"
+    html += '<br><div id="ranPic"><img border=0 src="' + pics['+j+'] + '"name="im" height=251></div>';
     html += "<br";
     
     // render html (line copied from another gadget source code) 
     _gel("content_div").innerHTML = html;
 }
 
-// update big photo / info on click
-function mouseClick(picnum) {
-	document.im.src = pics[picnum];
-	document.getElementById('txt').innerHTML=words[picnum];
+
+// change to the previous picture
+function mouseClickPrev(){
+        if (j > 0){
+           j=j-1;
+	   document.im.src = pics[j];}
+}
+
+// change to the next picture
+function mouseClickNext(){
+        if (j < (arraySize-1)){
+	       j=j+1;
+	       document.im.src = pics[j];}
 }
 
 </script>
