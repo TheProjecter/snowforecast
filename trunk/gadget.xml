@@ -9,7 +9,7 @@
 
  <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
-  <UserPref name="mystation" display_name="Ski Resort" default_value="http://www.snow-forecast.com/resorts/La-Pinilla/6day/" datatype="enum" >
+  <UserPref name="mystation" display_name="Ski Resort" default_value="snow-forecast.com/resorts/La-Pinilla/6day/" datatype="enum" >
     <EnumValue value="snow-forecast.com/resorts/La-Pinilla/6day/" display_value="La Pinilla" />
     <EnumValue value="snow-forecast.com/resorts/PuertoDeNavacerrada/6day/" display_value="Puerto Navacerrada"/>
     <EnumValue value="snow-forecast.com/resorts/Valdezcaray/6day/" display_value="Valdezcaray"/>
