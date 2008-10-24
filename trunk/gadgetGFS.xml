@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="__UP_myname__" height="310"
+<ModulePrefs title="__UP_myname__" height="320"
 	     description="View GFS model Europe" 
 	     author="Ignacio Rodriguez" 
 	     author_email="irodriguez@pegaso.ls.fi.upm.es" 
@@ -132,8 +132,8 @@ function showGadget (){
 	//	}
 	
 
-    html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="ttp://aovechki.googlepages.com/prev.gif"></a>';
-    html += ' <a align="center" onmousedown=mouseClickNext('+j+')><img src="ttp://aovechki.googlepages.com/next.gif"></a>';
+    html += '<a align="center" onmousedown=mouseClickPrev('+j+')><img src="http://aovechki.googlepages.com/prev.gif"></a>';
+    html += ' <a align="center" onmousedown=mouseClickNext('+j+')><img src="http://aovechki.googlepages.com/next.gif"></a>';
 	
 
     // display info about picture
