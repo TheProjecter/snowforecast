@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/irodriguez/snowforecast/SMSForecast
+python snowFocast.py --user oliverkaint@gmail.com --pwd RODRIGUE -cl SMSForecast

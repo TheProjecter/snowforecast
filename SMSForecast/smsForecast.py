@@ -19,12 +19,8 @@ calendar_service = Login(sys.argv[2], sys.argv[4])
 
 # Check if calendar is created
 if (not ExistCalendar(calendar_service, sys.argv[6])):
-  # Create new calendar
+  # Create new calendar if not it was created
   calendar = CreateCalendar(calendar_service, sys.argv[6])
-  print "NewCalendar: "+sys.argv[6]+" has been created"
-else:
-  print "The calendar is yet created"
-
 
 # Get the snow forecast of the ski resort.
 for resort in settings.SKI_RESORTS.keys():
