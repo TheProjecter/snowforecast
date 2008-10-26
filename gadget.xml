@@ -11,10 +11,33 @@
  <UserPref name="myname" display_name="Title" required="true" default_value="Snowforecast Info"/>
 
   <UserPref name="mystation" display_name="Ski Resort" default_value="snow-forecast.com/resorts/La-Pinilla/6day/" datatype="enum" >
+    <EnumValue value="snow-forecast.com/resorts/Altocampoo/6day/" display_value="Alto Campoo" />
+    <EnumValue value="snow-forecast.com/resorts/Astun/6day/" display_value="Astun" />
+    <EnumValue value="snow-forecast.com/resorts/Baqueira-Beret/6day/" display_value="Baqueira Beret" />
+    <EnumValue value="snow-forecast.com/resorts/Boi-Taull/6day/" display_value="Boi Taull" />
+    <EnumValue value="snow-forecast.com/resorts/Candanchu/6day/" display_value="Candanchu" />
+    <EnumValue value="snow-forecast.com/resorts/Cerler/6day/" display_value="Cerler" />
+    <EnumValue value="snow-forecast.com/resorts/Formigal/6day/" display_value="Formigal" />
+    <EnumValue value="snow-forecast.com/resorts/La-Molina/6day/" display_value="La Molina" />
     <EnumValue value="snow-forecast.com/resorts/La-Pinilla/6day/" display_value="La Pinilla" />
+    <EnumValue value="snow-forecast.com/resorts/Leitariegos/6day/" display_value="Leitariegos" />
+    <EnumValue value="snow-forecast.com/resorts/Manzaneda/6day/" display_value="Manzaneda" />
+    <EnumValue value="snow-forecast.com/resorts/Masella/6day/" display_value="Masella" />
+    <EnumValue value="snow-forecast.com/resorts/Panticosa/6day/" display_value="Panticosa" />
+    <EnumValue value="snow-forecast.com/resorts/Picos-De-Europa/6day/" display_value="Picos De Europa" />
+    <EnumValue value="snow-forecast.com/resorts/PortAine/6day/" display_value="Port Aine" />
+    <EnumValue value="snow-forecast.com/resorts/PortDelComte/6day/" display_value="Port Del Comte" />
     <EnumValue value="snow-forecast.com/resorts/PuertoDeNavacerrada/6day/" display_value="Puerto Navacerrada"/>
+    <EnumValue value="snow-forecast.com/resorts/San-Isidro/6day/" display_value="San Isidro" />
+    <EnumValue value="snow-forecast.com/resorts/Sierradebejar/6day/" display_value="Sierra De Bejar-La Covatilla" />
+    <EnumValue value="snow-forecast.com/resorts/Sierra-Nevada/6day/" display_value="Sierra Nevada" />
+    <EnumValue value="snow-forecast.com/resorts/SuperEspot/6day/" display_value="Super Spot" />
+    <EnumValue value="snow-forecast.com/resorts/Valdelinares/6day/" display_value="Valdelinares" />
     <EnumValue value="snow-forecast.com/resorts/Valdezcaray/6day/" display_value="Valdezcaray"/>
     <EnumValue value="snow-forecast.com/resorts/Valdesqui/6day/" display_value="Valdesqui"/>
+    <EnumValue value="snow-forecast.com/resorts/Valgrande-Pajares/6day/" display_value="Valgrande-Pajares" />
+    <EnumValue value="snow-forecast.com/resorts/ValldeNuria/6day/" display_value="Vall de Núria" />
+    <EnumValue value="snow-forecast.com/resorts/Vallter2000/6day/" display_value="Vallter 2000" />
   </UserPref> 
 
   <UserPref name="myheight" display_name="Resort Info Altitude" default_value="bot" datatype="enum" >
@@ -102,12 +125,12 @@
 	}
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
+		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"</td>";
 	}
 
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\">"+rain[i].childNodes[0].nodeValue+"mm</td>";
+		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\">"+rain[i].childNodes[0].nodeValue+"</td>";
 	}
 
 	html+="</tr><tr>";
@@ -157,7 +180,7 @@
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
 			 if(snow[i].childNodes.nodeValue != '-')
-			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
+			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"</td>";
 			 else
 			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"</td>";
 			 
@@ -166,7 +189,7 @@
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
 			 if(rain[i].childNodes.nodeValue != '-')
-			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\"><b>"+rain[i].childNodes[0].nodeValue+"mm</b></td>";
+			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\"><b>"+rain[i].childNodes[0].nodeValue+"</b></td>";
 			 else
 			 html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\"><b>"+rain[i].childNodes[0].nodeValue+"</b></td>";
 
