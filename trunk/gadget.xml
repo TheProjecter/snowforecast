@@ -61,11 +61,11 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-         html += "<table align='center'>";
+         html += "<table align='center'  border-left=1 border-top=1>";
 
 	 html+="<tr>";
          for(var i=0; i < 6; i++){
-		html+="<td align='center' width=38 border-left=1 border-top=1><b>"+
+		html+="<td align='center' width=38><b>"+
 			  days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
@@ -77,7 +77,7 @@
          html += "</tr></table></div>";
 
         // Display HTML string in <div>
-        _gel('content_div').innerHTML = html; 
+        _gel('content_div').innerHTML = html;
     }); 
   }
   _IG_RegisterOnloadHandler(displayMenu);
