@@ -126,7 +126,7 @@
 
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"</b></td>";
+		html+="<td style=\"text-align:center; font-size:50%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"</b></td>";
 	}
          html += "</tr></table></div>";
 
