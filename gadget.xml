@@ -61,12 +61,12 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-        html += "<table class='forecast' style=\"cellspacing:0;\">";
+        html += "<table style=\"cellspacing:0;\">";
 
 	html+="<tr>";
 	for(var i=0; i < 6; i++){
 		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
-			 "' style=\"text-align:center; width:38px; border:1px solid #666666; margin:0; padding:0;\"><b>"+
+			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
 			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
