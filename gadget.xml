@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="__UP_myname__" 
-	       height="200" 
+	       height="300" 
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"
-               scrolling="true"
-	       height="300">
+               scrolling="true">
     <Require feature="dynamic-height" /> 
   </ModulePrefs>
 
