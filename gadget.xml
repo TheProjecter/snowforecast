@@ -41,9 +41,8 @@
            }
 
          // Close up div
-         var html = "<div style='padding: 5px;background-color: #ccf;font-family:Arial, Helvetica;" +                   
-				 "text-align:left;font-size:90%'>";
-
+         var html = "<div>"; 
+         
       
          // Get the name Day
          var days = response.getElementsByTagName('DAYNAME');
