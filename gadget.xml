@@ -61,7 +61,7 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-        html += "<table class='forecast'>";
+        html += "<table class='forecast' style=\"cellspacing:0;\">";
 
 	html+="<tr>";
 	for(var i=0; i < 6; i++){
