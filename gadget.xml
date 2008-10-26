@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="__UP_myname__" 
-	       height="300" 
+	       height="500" 
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"
                scrolling="true">
