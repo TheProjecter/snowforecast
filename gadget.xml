@@ -71,7 +71,7 @@
 	   else{
              html+="<td>"+days[i].childNodes[0].nodeValue+"</td>";
              }
-           
+           }
          html += "</tr></table></div>";
 
         // Display HTML string in <div>
