@@ -61,18 +61,18 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-         html += "<table class='forecast'>";
+        html += "<table class='forecast'>";
 
-	 html+="<tr>";
-         for(var i=0; i < 6; i++){
-		html+="<td align='center' width=38><b>"+
-			  days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+	html+="<tr>";
+	for(var i=0; i < 6; i++){
+		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
+			 "' style=\"text-align:center; width:38px; border:1px solid #666666;\"><b>"+
+			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 6; i++){
-		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +"' style=\"text-align:center; width:38px; border:1px solid #666666;\"><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+		html+="<td><img src='"+pictureWeather[i].childNodes[0].nodeValue+"'></td>";
              }
          html += "</tr></table></div>";
 
