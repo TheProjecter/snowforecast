@@ -77,13 +77,20 @@
          freezing = response.getElementsByTagName('FREEZING');
          
         html += "<table style=\"cellspacing:0;\">";
-
+	var regionDay = "Morn-<br>ing</br>";
 	html+="<tr>";
 	for(var i=0; i < 9; i++){
+
+			 if(dayTime[i].childNodes[0].nodeValue == "Morning")
+			 regionDay = "Morn-<br>ing</br>";
+			 if(dayTime[i].childNodes[0].nodeValue == "Morning")
+			 regionDay = "After-<br>noon</br>";
+			 if(dayTime[i].childNodes[0].nodeValue == "Night")
+			 regionDay = "Night";
 		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
 			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
-			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+			 days[i].childNodes[0].nodeValue+"</b>"++"<br><b>"+
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+regionDay+"</td>";
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
@@ -95,12 +102,12 @@
 	}
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:80%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
+		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
 	}
 
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:80%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\">"+rain[i].childNodes[0].nodeValue+"mm</td>";
+		html+="<td style=\"text-align:center; font-size:75%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\">"+rain[i].childNodes[0].nodeValue+"mm</td>";
 	}
 
 	html+="</tr><tr>";
@@ -127,10 +134,16 @@
  
 	html+="<tr>";
 	for(var i=9; i < freezing.length; i++){
+			 if(dayTime[i].childNodes[0].nodeValue == "Morning")
+			 regionDay = "Morn-<br>ing</br>";
+			 if(dayTime[i].childNodes[0].nodeValue == "Morning")
+			 regionDay = "After-<br>noon</br>";
+			 if(dayTime[i].childNodes[0].nodeValue == "Night")
+			 regionDay = "Night";
 		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
 			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
 			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+regionDay+"</td>";
              }
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
