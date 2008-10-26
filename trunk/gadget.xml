@@ -46,20 +46,35 @@
          
       
          // Get the name Day
-         var days = response.getElementsByTagName('DAYNAME');
-         var daysNumber = response.getElementsByTagName('DAYNUMBER');
-         var dayColor = response.getElementsByTagName('DAYCOLOR');
-         var dayTime = response.getElementsByTagName('TIME');
-         var pictureWeather = response.getElementsByTagName('PICTUREWEATHER');
-         var pictureWind = response.getElementsByTagName('PICTUREWIND');
-         var snow = response.getElementsByTagName('SNOW');
-         var rain = response.getElementsByTagName('RAIN');
-         var maxColor = response.getElementsByTagName('MAXCOLOR');
-         var maxTemp = response.getElementsByTagName('MAXTEMP');
-         var minColor = response.getElementsByTagName('MINCOLOR');
-         var minTemp = response.getElementsByTagName('MINTEMP');
-         var sensation = response.getElementsByTagName('SENSATION');
-         var freezing = response.getElementsByTagName('FREEZING');
+         var days = null;
+         var daysNumber = null;
+         var dayColor = null;
+         var dayTime = null;
+         var pictureWeather = null;
+         var pictureWind = null;
+         var snow = null;
+         var rain = null;
+         var maxColor = null;
+         var maxTemp = null;
+         var minColor = null;
+         var minTemp = null;
+         var sensation = null;
+         var freezing = null;
+
+         days = response.getElementsByTagName('DAYNAME');
+         daysNumber = response.getElementsByTagName('DAYNUMBER');
+         dayColor = response.getElementsByTagName('DAYCOLOR');
+         dayTime = response.getElementsByTagName('TIME');
+         pictureWeather = response.getElementsByTagName('PICTUREWEATHER');
+         pictureWind = response.getElementsByTagName('PICTUREWIND');
+         snow = response.getElementsByTagName('SNOW');
+         rain = response.getElementsByTagName('RAIN');
+         maxColor = response.getElementsByTagName('MAXCOLOR');
+         maxTemp = response.getElementsByTagName('MAXTEMP');
+         minColor = response.getElementsByTagName('MINCOLOR');
+         minTemp = response.getElementsByTagName('MINTEMP');
+         sensation = response.getElementsByTagName('SENSATION');
+         freezing = response.getElementsByTagName('FREEZING');
          
         html += "<table style=\"cellspacing:0;\">";
 
