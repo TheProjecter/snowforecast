@@ -49,9 +49,9 @@
     </MAXLINE>
 
     <MINLINE>
-      {% for max in maxs %}
-      <MINCOLOR>{{max.color}}</MINCOLOR>
-      <MINTEMP>{{max.temp}}</MINTEMP>
+      {% for min in mins %}
+      <MINCOLOR>{{min.color}}</MINCOLOR>
+      <MINTEMP>{{min.temp}}</MINTEMP>
       {% endfor %}
     </MINLINE>
 
