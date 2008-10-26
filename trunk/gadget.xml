@@ -62,10 +62,17 @@
          
          html += "<table>";
          for(var i=0; i < days.length-1; i++){
-           if((i==0) || (i == 6) || (i==12)){
-             html+="<tr><td>"+days[i].childNodes[0].nodeValue+"</td></tr>";
-			  }}
-         html += "OK</div>";
+           if(i==0){
+	     html+="<tr><td>"+days[i].childNodes[0].nodeValue+"</td>";
+             }
+	   else if ((i == 6) || (i==12)){
+             html+="</tr><tr><td>"+days[i].childNodes[0].nodeValue+"</td>";
+	     }
+	   else{
+             html+="<td>"+days[i].childNodes[0].nodeValue+"</td>";
+             }
+           
+         html += "</tr></table></div>";
 
         // Display HTML string in <div>
         _gel('content_div').innerHTML = html; 
