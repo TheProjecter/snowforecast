@@ -118,7 +118,7 @@
 
         // Display HTML string in <div>
         _gel('content_div').innerHTML = html;
-    }); 
+    },{refreshInterval:5}); 
   }
   _IG_RegisterOnloadHandler(displayMenu);
   </script>
