@@ -4,7 +4,8 @@
 	       height="200" 
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"
-               scrolling="true">
+               scrolling="true"
+	       height="300">
     <Require feature="dynamic-height" /> 
   </ModulePrefs>
 
