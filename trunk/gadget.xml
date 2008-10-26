@@ -65,7 +65,7 @@
 
 	 html+="<tr>";
          for(var i=0; i < 6; i++){
-		html+="<td align='center' width=38 border-left='1px solid #666666' border-top='1px solid #666666'><b>"+
+		html+="<td align='center' width=38 border-left=1 border-top=1><b>"+
 			  days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
