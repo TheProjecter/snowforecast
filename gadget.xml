@@ -61,15 +61,16 @@
          var freezing = response.getElementsByTagName('FREEZING');
          
          html += "<table>";
-         for(var i=0; i < days.length-1; i++){
+         for(var i=0; i < days.length; i++){
            if(i==0){
-	     html+="<tr><td>"+days[i].childNodes[0].nodeValue+"</td>";
+	     html+="<tr><td width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+			  dayNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
 	   else if ((i == 6) || (i==12)){
-             html+="</tr><tr><td>"+days[i].childNodes[0].nodeValue+"</td>";
+             html+="</tr><tr><td width=38>"+days[i].childNodes[0].nodeValue+"</td>";
 	     }
 	   else{
-             html+="<td>"+days[i].childNodes[0].nodeValue+"</td>";
+             html+="<td width=38>"+days[i].childNodes[0].nodeValue+"</td>";
              }
            }
          html += "</tr></table></div>";
