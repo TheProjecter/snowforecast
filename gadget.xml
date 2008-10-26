@@ -60,7 +60,7 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-         html += "<table>";
+         html += "<table align='center'>";
          for(var i=0; i < days.length; i++){
            if(i==0){
 	     html+="<tr><td align='center' width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
