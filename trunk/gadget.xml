@@ -71,8 +71,8 @@
          rain = response.getElementsByTagName('RAIN');
          maxColor = response.getElementsByTagName('MAXCOLOR');
          maxTemp = response.getElementsByTagName('MAXTEMP');
-         minColor = response.getElementsByTagName('MINCOLOR');
-         minTemp = response.getElementsByTagName('MINTEMP');
+         minColor = response.getElementsByTagName('COLOMIN');
+         minTemp = response.getElementsByTagName('TEMPMIN');
          sensation = response.getElementsByTagName('SENSATION');
          freezing = response.getElementsByTagName('FREEZING');
          
