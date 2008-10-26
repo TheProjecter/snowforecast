@@ -72,7 +72,7 @@
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 6; i++){
-		html+="<td><img src='"+pictureWeather[i].childNodes[0].nodeValue+"'></td>";
+		html+="<td style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><img src='"+pictureWeather[i].childNodes[0].nodeValue+"'></td>";
              }
          html += "</tr></table></div>";
 
