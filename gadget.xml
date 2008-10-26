@@ -124,7 +124,56 @@
 	for(var i=0; i < 9; i++){
 		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"</b></td>";
 	}
-         html += "</tr></table></div>";
+ 
+	html+="<tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
+			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
+			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+             }
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><img src='"+pictureWeather[i].childNodes[0].nodeValue+"'></td>";
+             }
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><img src='"+pictureWind[i].childNodes[0].nodeValue+"'></td>";
+	}
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"</td>";
+	}
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#009900;\"><b>"+rain[i].childNodes[0].nodeValue+"</b></td>";
+	}
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\" bgcolor='"+maxColor[i].childNodes[0].nodeValue+"'><b>"+maxTemp[i].childNodes[0].nodeValue+"</b></td>";
+	}
+
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\" bgcolor='"+minColor[i].childNodes[0].nodeValue+"'><b>"+minTemp[i].childNodes[0].nodeValue+"</b></td>";
+	}
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+sensation[i].childNodes[0].nodeValue+"</b></td>";
+	}
+
+
+	html+="</tr><tr>";
+	for(var i=9; i < freezing.length; i++){
+		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"</b></td>";
+	}
+
+        html += "</tr></table></div>";
 
         // Display HTML string in <div>
         _gel('content_div').innerHTML = html;
