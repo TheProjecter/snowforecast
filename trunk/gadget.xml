@@ -122,7 +122,7 @@
 
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
-		html+="<td style=\"text-align:center; font-size:80%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"m</b></td>";
+		html+="<td style=\"text-align:center; font-size:70%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"m</b></td>";
 	}
  
 	html+="<tr>";
@@ -143,7 +143,7 @@
 	}
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
-		html+="<td style=\"text-align:center; font-size:90%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
+		html+="<td style=\"text-align:center; font-size:80%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;color:#CC0000;\">"+snow[i].childNodes[0].nodeValue+"cm</td>";
 	}
 
 	html+="</tr><tr>";
@@ -170,7 +170,7 @@
 
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
-		html+="<td style=\"text-align:center; font-size:80%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"m</b></td>";
+		html+="<td style=\"text-align:center; font-size:70%;font-weight:bold;width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+freezing[i].childNodes[0].nodeValue+"m</b></td>";
 	}
 
         html += "</tr></table></div>";
