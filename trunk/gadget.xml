@@ -44,11 +44,24 @@
          var html = "<div style='padding: 5px;background-color: #ccf;font-family:Arial, Helvetica;" +                   
 				 "text-align:left;font-size:90%'>";
 
-         html +="<div style='text-align:center; font-size: 120%; color: yellow; " +
-		             "font-weight: 700;'>"; 
-
-         html += url + "</div><br>"; 
-         html += "</div>";
+      
+         // Get the name Day
+         var days = response.getElementsByTagName('DAYNAME');
+         var daysNumber = response.getElementsByTagName('DAYNUMBER');
+         var dayColor = response.getElementsByTagName('DAYCOLOR');
+         var dayTime = response.getElementsByTagName('TIME');
+         var pictureWeather = response.getElementsByTagName('PICTUREWEATHER');
+         var pictureWind = response.getElementsByTagName('PICTUREWIND');
+         var snow = response.getElementsByTagName('SNOW');
+         var rain = response.getElementsByTagName('RAIN');
+         var maxColor = response.getElementsByTagName('MAXCOLOR');
+         var maxTemp = response.getElementsByTagName('MAXTEMP');
+         var minColor = response.getElementsByTagName('MINCOLOR');
+         var minTemp = response.getElementsByTagName('MINTEMP');
+         var sensation = response.getElementsByTagName('SENSATION');
+         var freezing = response.getElementsByTagName('FREEZING');
+         
+         html += "OK</div>";
 
         // Display HTML string in <div>
         _gel('content_div').innerHTML = html; 
