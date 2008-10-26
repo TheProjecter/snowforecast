@@ -64,7 +64,7 @@
          for(var i=0; i < days.length; i++){
            if(i==0){
 	     html+="<tr><td width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			  dayNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
+			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
 	   else if ((i == 6) || (i==12)){
              html+="</tr><tr><td width=38>"+days[i].childNodes[0].nodeValue+"</td>";
