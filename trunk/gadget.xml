@@ -61,7 +61,7 @@
          var sensation = response.getElementsByTagName('SENSATION');
          var freezing = response.getElementsByTagName('FREEZING');
          
-         html += "<table align='center'  border-left=1 border-top=1>";
+         html += "<table class='forecast'>";
 
 	 html+="<tr>";
          for(var i=0; i < 6; i++){
@@ -71,7 +71,7 @@
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 6; i++){
-		html+="<td align='center' width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+		html+="<td style=\"align:'center'; width:38px; border-left:1px solid #666666; border-top:1px solid #666666\"><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
          html += "</tr></table></div>";
