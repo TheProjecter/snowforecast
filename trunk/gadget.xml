@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="__UP_myname__" 
-	       height="550" 
+	       height="495" 
 	       author="Ignacio Rodriguez" 
 	       author_email="irodriguez@pegaso.ls.fi.upm.es"
                scrolling="true">
@@ -90,7 +90,7 @@
 		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
 			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
 			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			 daysNumber[i].childNodes[0].nodeValue+"</b></br><b>"+regionDay+"</b></td>";
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br></td>";
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 9; i++){
@@ -143,7 +143,7 @@
 		html+="<td bgcolor='"+ dayColor[i].childNodes[0].nodeValue +
 			 "' style=\"text-align:center; width:38px; cellspacing:0; border:1px solid #666666; margin:0; padding:0;\"><b>"+
 			 days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
-			 daysNumber[i].childNodes[0].nodeValue+"</b></br><b>"+regionDay+"</b></td>";
+			 daysNumber[i].childNodes[0].nodeValue+"</b></br></td>";
              }
 	html+="</tr><tr>";
 	for(var i=9; i < freezing.length; i++){
