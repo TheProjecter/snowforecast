@@ -71,7 +71,7 @@
              }
 	html+="</tr><tr>";
 	for(var i=0; i < 6; i++){
-		html+="<td style=\"text-align:center; width:38px; border-left:1px solid #666666; border-top:1px solid #666666\"><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+		html+="<td bgcolor='"+ dayColor.childNodes[0].nodeValue +"' style=\"text-align:center; width:38px; border:1px solid #666666;\"><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
          html += "</tr></table></div>";
