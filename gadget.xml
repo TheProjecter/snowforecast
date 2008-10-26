@@ -63,14 +63,16 @@
          html += "<table>";
          for(var i=0; i < days.length; i++){
            if(i==0){
-	     html+="<tr><td width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+	     html+="<tr><td align='center' width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
 			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
 	   else if ((i == 6) || (i==12)){
-             html+="</tr><tr><td width=38>"+days[i].childNodes[0].nodeValue+"</td>";
+	     html+="</tr><tr><td align='center' width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
 	     }
 	   else{
-             html+="<td width=38>"+days[i].childNodes[0].nodeValue+"</td>";
+	     html+="<td align='center' width=38><b>"+days[i].childNodes[0].nodeValue+"</b>"+"<br><b>"+
+			  daysNumber[i].childNodes[0].nodeValue+"</b></br>"+"</td>";
              }
            }
          html += "</tr></table></div>";
